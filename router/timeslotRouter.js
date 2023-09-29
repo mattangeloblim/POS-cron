@@ -39,7 +39,7 @@ const updateStatus = () => {
   });
 };
 
-cron.schedule("30 * * * * *", () => {
+cron.schedule("45 * * * * *", () => {
   updateStatus();
   console.log("Schedule Refresh");
 });
