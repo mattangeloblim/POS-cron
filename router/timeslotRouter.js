@@ -8,7 +8,7 @@ const updateStatus = () => {
   const db = getDB();
   const currentTime = new Date();
   console.log(currentTime);
-  currentTime.setSeconds(currentTime.getSeconds() + 45);
+  currentTime.setSeconds(currentTime.getSeconds() + 360);
 
   const adjustedTime = currentTime.toLocaleTimeString("en-US", {
     hour12: false,
@@ -39,7 +39,7 @@ const updateStatus = () => {
   });
 };
 
-cron.schedule("45 * * * * *", () => {
+cron.schedule("59 * * * * *", () => {
   updateStatus();
   console.log("Schedule Refresh");
 });
