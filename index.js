@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 // const cors = require("cors");
 const timeslotRouter = require("./router/timeslotRouter");
+const generateResultRouter = require("./router/generateResultRouter")
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
