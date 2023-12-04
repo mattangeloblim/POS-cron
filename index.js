@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cors());
 
 app.use("/api", timeslotRouter)
+app.use("/api", generateResultRouter)
 
 const port = 8081;
 app.listen(port, () => {
